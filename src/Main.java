@@ -8,12 +8,14 @@ import models.Member;
 import models.Library;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
         Library library = new Library("WiT Library");
         Librarian librarian = new Librarian(1, "Aziz Takcı", "aziz123", library);
 
