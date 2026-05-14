@@ -24,7 +24,7 @@ public class Author {
     }
 
     public Set<Book> getBooks() {
-        return books;
+        return new HashSet<>(books);
     }
 
     public void addBook(Book book) {
@@ -45,5 +45,10 @@ public class Author {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Author{id=" + id + ", name='" + name + "', bookCount=" + books.size() + "}";
     }
 }

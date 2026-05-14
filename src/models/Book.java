@@ -68,4 +68,14 @@ public class Book {
                 + " | Kategori: " + category
                 + " | Durum: " + status);
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + bookId
+                + " | " + title
+                + " | Yazar: " + author.getName()
+                + " | Fiyat: " + price + " TL"
+                + " | Kategori: " + category
+                + " | Durum: " + status;
+    }
 }

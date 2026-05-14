@@ -148,10 +148,10 @@ public class Library {
     }
 
     public List<Invoice> getAllInvoices() {
-        return allInvoices;
+        return new ArrayList<>(allInvoices);
     }
 
     public Set<Author> getAllAuthors() {
-        return authors;
+        return new HashSet<>(authors);
     }
 }

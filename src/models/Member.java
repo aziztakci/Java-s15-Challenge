@@ -27,7 +27,7 @@ public class Member extends Person {
     }
 
     public List<Invoice> getInvoices() {
-        return invoices;
+        return new ArrayList<>(invoices);
     }
 
     public boolean canBorrow () {
@@ -56,5 +56,14 @@ public class Member extends Person {
     @Override
     public String whoYouAre() {
         return "Member: " + getName() + "ID: " + getId();
+    }
+
+    @Override
+    public String toString() {
+        return "Member{id=" + getId()
+                + ", name='" + getName() + '\''
+                + ", phone='" + phone + '\''
+                + ", booksIssued=" + booksIssued + "/" + maxBooks
+                + "}";
     }
 }
