@@ -71,21 +71,21 @@ public class Main {
             switch (secim) {
 
                 case 1:
-                    System.out.print("Kitap ID: ");
+                    System.out.print("Kitap ID/int: ");
                     int yeniId = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Kitap adı: ");
+                    System.out.print("Kitap adı/String: ");
                     String yeniAd = scanner.nextLine();
 
-                    System.out.print("Yazar ID: ");
+                    System.out.print("Yazar ID/int: ");
                     int yazarId = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Yazar adı: ");
+                    System.out.print("Yazar adı/String: ");
                     String yazarAd = scanner.nextLine();
 
-                    System.out.print("Fiyat: ");
+                    System.out.print("Fiyat/double.: ");
                     double yeniFiyat = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -100,12 +100,12 @@ public class Main {
 
                 case 2:
                     System.out.println("1) ID ile  2) İsim ile  3) Yazar ile");
-                    System.out.print("Seçim: ");
+                    System.out.print("Seçim/int: ");
                     int aramaTipi = scanner.nextInt();
                     scanner.nextLine();
 
                     if (aramaTipi == 1) {
-                        System.out.print("Kitap ID: ");
+                        System.out.print("Kitap ID/int: ");
                         int araId = scanner.nextInt();
                         scanner.nextLine();
                         Book bulunan = librarian.findById(araId);
@@ -115,7 +115,7 @@ public class Main {
                             bulunan.display();
                         }
                     } else if (aramaTipi == 2) {
-                        System.out.print("Kitap adı: ");
+                        System.out.print("Kitap adı/String: ");
                         String araAd = scanner.nextLine();
                         List<Book> sonuclar = librarian.findByTitle(araAd);
                         if (sonuclar.isEmpty()) {
@@ -124,7 +124,7 @@ public class Main {
                             for (Book b : sonuclar) b.display();
                         }
                     } else if (aramaTipi == 3) {
-                        System.out.print("Yazar adı: ");
+                        System.out.print("Yazar adı/String: ");
                         String araYazar = scanner.nextLine();
                         List<Book> sonuclar = librarian.findByAuthor(araYazar);
                         if (sonuclar.isEmpty()) {
@@ -138,14 +138,14 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.print("Güncellenecek kitap ID: ");
+                    System.out.print("Güncellenecek kitap ID/int: ");
                     int gunId = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Yeni kitap adı: ");
+                    System.out.print("Yeni kitap adı/String: ");
                     String gunAd = scanner.nextLine();
 
-                    System.out.print("Yeni fiyat: ");
+                    System.out.print("Yeni fiyat/double: ");
                     double gunFiyat = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -161,7 +161,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.print("Silinecek kitap ID: ");
+                    System.out.print("Silinecek kitap ID/int: ");
                     int silId = scanner.nextInt();
                     scanner.nextLine();
 
@@ -185,7 +185,7 @@ public class Main {
                     break;
 
                 case 6:
-                    System.out.print("Yazar adı: ");
+                    System.out.print("Yazar adı/String: ");
                     String yazAd = scanner.nextLine();
                     List<Book> yazSonuc = librarian.findByAuthor(yazAd);
                     if (yazSonuc.isEmpty()) {
@@ -196,14 +196,14 @@ public class Main {
                     break;
 
                 case 7:
-                    System.out.print("Üye ID: ");
+                    System.out.print("Üye ID/int: ");
                     int uyeId = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Üye adı: ");
+                    System.out.print("Üye adı/String: ");
                     String uyeAd = scanner.nextLine();
 
-                    System.out.print("Telefon: ");
+                    System.out.print("Telefon/String: ");
                     String tel = scanner.nextLine();
 
                     librarian.registerMember(new Member(uyeId, uyeAd, tel));
@@ -211,11 +211,11 @@ public class Main {
                     break;
 
                 case 8:
-                    System.out.print("Kitap ID: ");
+                    System.out.print("Kitap ID/int: ");
                     int odKitap = scanner.nextInt();
                     scanner.nextLine();
 
-                    System.out.print("Üye ID: ");
+                    System.out.print("Üye ID/int: ");
                     int odUye = scanner.nextInt();
                     scanner.nextLine();
 
@@ -227,7 +227,7 @@ public class Main {
                     break;
 
                 case 9:
-                    System.out.print("İade edilecek kitap ID: ");
+                    System.out.print("İade edilecek kitap ID/int: ");
                     int iadeId = scanner.nextInt();
                     scanner.nextLine();
 
